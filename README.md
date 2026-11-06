@@ -41,6 +41,19 @@ ESP8266 dev, ESP32 dev and LOLIN C3 Mini use the same D1 Mini pin positions.
 - LOLIN C3 Mini: the RGB LED also sits on GPIO 7 and may flicker while drawing.
 - ESP32-C3 Super Mini: boot pins GPIO 2, 8, 9 stay free.
 
+## Libraries
+
+Install via the Arduino Library Manager:
+
+| Library | Needed for | URL |
+|---|---|---|
+| Adafruit GC9A01A | `LIBRARY_ADAFRUIT` | https://github.com/adafruit/Adafruit_GC9A01A |
+| Adafruit GFX Library | `LIBRARY_ADAFRUIT` | https://github.com/adafruit/Adafruit-GFX-Library |
+| Adafruit BusIO | `LIBRARY_ADAFRUIT` | https://github.com/adafruit/Adafruit_BusIO |
+| LovyanGFX | `LIBRARY_LOVYANGFX` | https://github.com/lovyan03/LovyanGFX |
+
+Board packages: [esp8266](https://github.com/esp8266/Arduino) for the ESP8266, [esp32 by Espressif](https://github.com/espressif/arduino-esp32) for ESP32 and ESP32-C3.
+
 ## Status
 
 Not yet compiled or tested on hardware.
