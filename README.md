@@ -14,7 +14,7 @@ Demos for the 1.28" round GC9A01 TFT (240×240, SPI, module ZJY_IPS128_8P) on ES
 Each sketch folder is self-contained for the Arduino IDE, so `config.h` and `boards.h` exist in every folder (the `display_*.h` files differ per demo); change them everywhere when you change one.
 On a black screen the answers "Ja", "Nein" and "Vielleicht" slowly fade in from black to white, hold, fade out, then the screen stays dark before the next answer.
 
-Blog post (German): https://www.fambach.net (link follows)
+Blog post (German): https://www.fambach.net/?p=20975
 
 ## Magic 8 Ball
 
