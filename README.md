@@ -62,7 +62,7 @@ Board packages: [esp8266](https://github.com/esp8266/Arduino) for the ESP8266, [
 
 ## Status
 
-- Magic 8 Ball (triangle version, now `Magic8BallEnhanced`) runs on an ESP32-C3 Super Mini (tested by Stefan, 2026-11-06).
+- `Magic8Ball` and `Magic8BallEnhanced` run on an ESP32-C3 Super Mini with Adafruit GC9A01A (tested by Stefan, 2026-11-06).
 - Everything else is not yet tested on hardware.
 
 ## License
