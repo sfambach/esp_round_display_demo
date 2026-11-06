@@ -1,0 +1,60 @@
+# ESP Round Display Demo
+
+Demos for the 1.28" round GC9A01 TFT (240×240, SPI, module ZJY_IPS128_8P) on ESP8266, ESP32 and ESP32-C3.
+
+First demo: Magic 8 Ball.
+On a black screen the answers "Ja", "Nein" and "Vielleicht" fade in on a blue triangle, hold, fade out, then the screen stays dark before the next answer.
+
+Blog post (German): https://www.fambach.net (link follows)
+
+## Magic 8 Ball
+
+Folder `Magic8Ball`. The image is rendered in five 36-line bands (14 KB) instead of a full frame buffer, so it also fits into the ESP8266.
+
+### Configuration (`config.h`)
+
+| Setting | Values |
+|---|---|
+| `DISPLAY_LIBRARY` | `LIBRARY_ADAFRUIT` (Adafruit GC9A01A + Adafruit GFX, default), `LIBRARY_LOVYANGFX` |
+| `TARGET_BOARD` | `BOARD_AUTO` (default), `BOARD_ESP8266_DEV`, `BOARD_ESP32_DEV`, `BOARD_ESP32C3_SUPER_MINI`, `BOARD_LOLIN_C3_MINI` |
+
+`BOARD_AUTO` picks the board from the chip selected in the Arduino IDE: ESP8266 → ESP8266 dev, ESP32 → ESP32 dev, ESP32-C3 → C3 Super Mini. Pins are in `boards.h`.
+
+### Wiring
+
+ESP8266 dev, ESP32 dev and LOLIN C3 Mini use the same D1 Mini pin positions.
+
+| Display | D1 pin | ESP8266 dev (D1 Mini, NodeMCU) | ESP32 dev (D1 Mini ESP32) | LOLIN C3 Mini | ESP32-C3 Super Mini |
+|---|---|---|---|---|---|
+| VCC | 3V3 | 3.3 V | 3.3 V | 3.3 V | 3.3 V |
+| GND | G | GND | GND | GND | GND |
+| SCL (SCK) | D5 | GPIO 14 | GPIO 18 | GPIO 1 | GPIO 4 |
+| SDA (MOSI) | D7 | GPIO 13 | GPIO 23 | GPIO 4 | GPIO 6 |
+| CS | D8 | GPIO 15 | GPIO 5 | GPIO 5 | GPIO 7 |
+| DC | D3 | GPIO 0 | GPIO 17 | GPIO 7 | GPIO 5 |
+| RES | D0 | GPIO 16 | GPIO 26 | GPIO 2 | GPIO 3 |
+| BLK | – | 3.3 V | 3.3 V | 3.3 V | GPIO 10 |
+
+- The module is rated 2.8–3.3 V: do not connect VCC to 5 V.
+- ESP8266: D3/D4/D8 are boot pins, so BLK goes to 3V3.
+- ESP32 with WROVER module: GPIO 16/17 belong to the PSRAM, move DC.
+- LOLIN C3 Mini: the RGB LED also sits on GPIO 7 and may flicker while drawing.
+- ESP32-C3 Super Mini: boot pins GPIO 2, 8, 9 stay free.
+
+## Status
+
+Not yet compiled or tested on hardware.
+
+## License
+
+PolyForm Noncommercial 1.0.0, see [LICENSE.md](LICENSE.md). Copyright (c) 2026 Stefan Fambach (SteFam).
+The libraries used have their own licenses.
+
+## Authors
+
+- **Stefan Fambach** (SteFam) – idea and concept, review and testing – https://www.fambach.net
+- **Claude** (Anthropic AI) – implementation, via Claude Code
+
+## AI disclosure
+
+This project is built with AI assistance. Stefan Fambach had the idea, wrote the concept and reviews and tests every change; the implementation (code and documentation) is written largely by Claude (Anthropic) via Claude Code.
