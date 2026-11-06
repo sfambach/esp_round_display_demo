@@ -6,6 +6,7 @@ Demos for the 1.28" round GC9A01 TFT (240×240, SPI, module ZJY_IPS128_8P) on ES
 |---|---|
 | `Magic8Ball` | "Ja", "Nein", "Vielleicht" slowly fade in from black to white on a black screen |
 | `Magic8BallEnhanced` | the same answers on a blue die triangle that rises and fades in, like in the real ball |
+| `RadioTuner` | an FM tuner: a marker glides along the 87.5–108 MHz scale from station to station (FFH, Radio Bob, hr3, hr1), the frequency counts along and the station name fades in |
 | `Circles` | coloured rings appear from the edge inwards to the centre, then are erased from the centre outwards; positions and colours are calculated from `RING_COUNT` |
 
 Each sketch folder is self-contained for the Arduino IDE, so `config.h` and `boards.h` exist in every folder (the `display_*.h` files differ per demo); change them everywhere when you change one.
