@@ -2,14 +2,19 @@
 
 Demos for the 1.28" round GC9A01 TFT (240×240, SPI, module ZJY_IPS128_8P) on ESP8266, ESP32 and ESP32-C3.
 
-First demo: Magic 8 Ball.
+| Sketch | What it shows |
+|---|---|
+| `Magic8Ball` | "Ja", "Nein", "Vielleicht" slowly fade in from black to white on a black screen |
+| `Magic8BallEnhanced` | the same answers on a blue die triangle that rises and fades in, like in the real ball |
+
+Each sketch folder is self-contained for the Arduino IDE, so `config.h`, `boards.h` and the `display_*.h` files exist in both; change them in both when you change one.
 On a black screen the answers "Ja", "Nein" and "Vielleicht" slowly fade in from black to white, hold, fade out, then the screen stays dark before the next answer.
 
 Blog post (German): https://www.fambach.net (link follows)
 
 ## Magic 8 Ball
 
-Folder `Magic8Ball`. Only the text area is redrawn, in two 36-line bands (16 KB) instead of a full frame buffer, so it also fits into the ESP8266.
+Folders `Magic8Ball` and `Magic8BallEnhanced`. Only the area that changes is redrawn, in 36-line bands (14–16 KB) instead of a full frame buffer, so it also fits into the ESP8266.
 
 ### Configuration (`config.h`)
 
