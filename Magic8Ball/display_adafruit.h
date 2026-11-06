@@ -42,10 +42,6 @@ public:
     band.fillScreen(GC9A01A_BLACK);
   }
 
-  void fillTriangle(int x0, int y0, int x1, int y1, int x2, int y2, uint16_t fill) {
-    band.fillTriangle(x0, y0, x1, y1, x2, y2, fill);
-  }
-
   void drawCenteredText(const char* text, int fontIndex, int centerX, int centerY, uint16_t ink) {
     int16_t x = 0, y = 0;
     uint16_t width = 0, height = 0;

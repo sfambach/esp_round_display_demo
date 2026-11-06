@@ -3,13 +3,13 @@
 Demos for the 1.28" round GC9A01 TFT (240×240, SPI, module ZJY_IPS128_8P) on ESP8266, ESP32 and ESP32-C3.
 
 First demo: Magic 8 Ball.
-On a black screen the answers "Ja", "Nein" and "Vielleicht" fade in on a blue triangle, hold, fade out, then the screen stays dark before the next answer.
+On a black screen the answers "Ja", "Nein" and "Vielleicht" slowly fade in from black to white, hold, fade out, then the screen stays dark before the next answer.
 
 Blog post (German): https://www.fambach.net (link follows)
 
 ## Magic 8 Ball
 
-Folder `Magic8Ball`. The image is rendered in five 36-line bands (14 KB) instead of a full frame buffer, so it also fits into the ESP8266.
+Folder `Magic8Ball`. Only the text area is redrawn, in two 36-line bands (16 KB) instead of a full frame buffer, so it also fits into the ESP8266.
 
 ### Configuration (`config.h`)
 
