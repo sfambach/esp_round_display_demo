@@ -66,7 +66,7 @@ Board packages: [esp8266](https://github.com/esp8266/Arduino) for the ESP8266, [
 ## Status
 
 - All demos run on an ESP32-C3 Super Mini (tested by Stefan, 2026-11-06/07, see the videos in the blog post).
-- The other boards are not yet tested on hardware.
+- Only tested on the ESP32-C3 Super Mini. The pin sets for ESP8266, ESP32 and LOLIN C3 Mini are derived from the board pinouts and not tested by the author.
 
 ## License
 
