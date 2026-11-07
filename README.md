@@ -4,8 +4,8 @@ Demos for the 1.28" round GC9A01 TFT (240×240, SPI, module ZJY_IPS128_8P) on ES
 
 | Sketch | What it shows |
 |---|---|
-| `Magic8Ball` | "Ja", "Nein", "Vielleicht" slowly fade in from black to white on a black screen |
-| `Magic8BallEnhanced` | the same answers on a blue die triangle that rises and fades in, like in the real ball |
+| `OracleBall` | "Ja", "Nein", "Vielleicht" slowly fade in from black to white on a black screen |
+| `OracleBallEnhanced` | the same answers on a blue triangle that rises and fades in, like in a fortune-telling ball |
 | `RadioTuner` | an FM tuner: a marker glides along the 87.5–108 MHz scale from station to station (FFH, Radio Bob, hr3, hr1), the frequency counts along and the station name fades in |
 | `Oscilloscope` | an old green phosphor oscilloscope: graticule with divisions and a running sine wave with a soft glow |
 | `Radar` | a radar sweep with fading trail over range rings; now and then a random hostile contact appears, lights up on each pass and fades |
@@ -16,9 +16,9 @@ On a black screen the answers "Ja", "Nein" and "Vielleicht" slowly fade in from 
 
 Blog post (German): https://www.fambach.net/?p=20975
 
-## Magic 8 Ball
+## Oracle ball
 
-Folders `Magic8Ball` and `Magic8BallEnhanced`. Only the area that changes is redrawn, in 36-line bands (14–16 KB) instead of a full frame buffer, so it also fits into the ESP8266.
+Folders `OracleBall` and `OracleBallEnhanced`. Only the area that changes is redrawn, in 36-line bands (14–16 KB) instead of a full frame buffer, so it also fits into the ESP8266.
 
 ### Configuration (`config.h`)
 
@@ -65,7 +65,7 @@ Board packages: [esp8266](https://github.com/esp8266/Arduino) for the ESP8266, [
 
 ## Status
 
-- `Magic8Ball` and `Magic8BallEnhanced` run on an ESP32-C3 Super Mini (tested by Stefan, 2026-11-06).
+- `OracleBall` and `OracleBallEnhanced` run on an ESP32-C3 Super Mini (tested by Stefan, 2026-11-06).
 - Everything else is not yet tested on hardware.
 
 ## License
