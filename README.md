@@ -65,8 +65,8 @@ Board packages: [esp8266](https://github.com/esp8266/Arduino) for the ESP8266, [
 
 ## Status
 
-- `OracleBall` and `OracleBallEnhanced` run on an ESP32-C3 Super Mini (tested by Stefan, 2026-11-06).
-- Everything else is not yet tested on hardware.
+- All demos run on an ESP32-C3 Super Mini (tested by Stefan, 2026-11-06/07, see the videos in the blog post).
+- The other boards are not yet tested on hardware.
 
 ## License
 
